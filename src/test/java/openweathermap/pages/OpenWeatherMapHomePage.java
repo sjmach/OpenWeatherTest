@@ -23,11 +23,23 @@ public class OpenWeatherMapHomePage extends PageObject {
     @FindBy(id="searchform")
     WebElementFacade searchForm;
 
-
-
     @FindBy(xpath="//h2[contains(@class, 'widget__title')]")
     WebElementFacade widgetTitle;
 
+    @FindBy(id="tab-main")
+    WebElementFacade tabMain;
+
+    @FindBy(id="tab-daily")
+    WebElementFacade tabDaily;
+
+    @FindBy(id="tab-hourly")
+    WebElementFacade tabHourly;
+
+    @FindBy(id="tab-chart")
+    WebElementFacade tabChart;
+
+    @FindBy(id="tab-map")
+    WebElementFacade tabMap;
 
 
     public OpenWeatherMapHomePage(WebDriver driver) {
@@ -54,7 +66,27 @@ public class OpenWeatherMapHomePage extends PageObject {
         return widgetTitle.getText();
     }
 
+    public String getTabMainText(){
+        return tabMain.getText();
 
+    }
+    public String getTabDailyText(){
+        return tabDaily.getText();
 
+    }
+
+    public String getTabHourlyText(){
+        return tabHourly.getText();
+
+    }
+
+    public String getTabChartText(){
+        return tabChart.getText();
+
+    }
+    public String getTabMapText(){
+        return tabMap.getText();
+
+    }
 
 }

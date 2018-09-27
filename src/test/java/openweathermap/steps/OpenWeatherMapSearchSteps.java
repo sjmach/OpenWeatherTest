@@ -44,7 +44,11 @@ public class OpenWeatherMapSearchSteps extends ScenarioSteps {
 
     @Then("I should see all elements are correctly present on the homepage")
     public void see_elements_home_page() {
-
+       Assert.assertEquals("Main Tab is not visible on Home Page",homePage.getTabMainText(),"Main");
+       Assert.assertEquals("Daily Tab is not visible on Home Page",homePage.getTabDailyText(),"Daily");
+       Assert.assertEquals("Hourly Tab is not visible on Home Page",homePage.getTabHourlyText(),"Hourly");
+       Assert.assertEquals("Chart Tab is not visible on Home Page",homePage.getTabChartText(),"Chart");
+       Assert.assertEquals("Map Tab is not visible on Home Page",homePage.getTabMapText(),"Map");
        Assert.assertEquals("The widget title is not correct","Current weather and forecasts in your city",  homePage.getwidgetTitle());
     }
 
