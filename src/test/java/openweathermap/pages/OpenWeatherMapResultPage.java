@@ -2,7 +2,6 @@ package openweathermap.pages;
 
 
 
-import net.aksingh.owmjapis.api.APIException;
 import net.aksingh.owmjapis.model.CurrentWeather;
 import net.serenitybdd.core.pages.PageObject;
 import net.serenitybdd.core.pages.WebElementFacade;
@@ -12,7 +11,6 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
@@ -86,18 +84,6 @@ public class OpenWeatherMapResultPage extends PageObject {
 
     }
 
-    public String getGeoCoords(){
-        waitFor(tableList);
-        List<WebElement> ptags = tableList.findElements(By.tagName("p"));
-        for (WebElement element : ptags){
-            if(element.getText().contains("Geo coords")){
-                return element.getText();
-            }
-
-        }
-        return  null;
-
-    }
 
     public String getActualTemperatureUI(){
         waitFor(tableList);

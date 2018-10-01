@@ -17,12 +17,12 @@ import static org.hamcrest.CoreMatchers.containsString;
 
 
 public class OpenWeatherMapSearchSteps extends ScenarioSteps {
-    OpenWeatherMapHomePage homePage;
-    OpenWeatherMapResultPage resultPage;
+    private OpenWeatherMapHomePage homePage;
+    private OpenWeatherMapResultPage resultPage;
 
 
     @Given("I am on home page of the application")
-    public void open_home_page() {
+    public void openHomepage() {
         homePage.open();
         //Validate the Title
         Assert.assertEquals("The Title is not matching of the homepage","Сurrent weather and forecast - OpenWeatherMap", homePage.getPageTitle());
@@ -43,7 +43,7 @@ public class OpenWeatherMapSearchSteps extends ScenarioSteps {
     }
 
     @Then("I should see all elements are correctly present on the homepage")
-    public void see_elements_home_page() {
+    public void seeElementsHomePage() {
        Assert.assertEquals("Main Tab is not visible on Home Page",homePage.getTabMainText(),"Main");
        Assert.assertEquals("Daily Tab is not visible on Home Page",homePage.getTabDailyText(),"Daily");
        Assert.assertEquals("Hourly Tab is not visible on Home Page",homePage.getTabHourlyText(),"Hourly");
@@ -53,7 +53,7 @@ public class OpenWeatherMapSearchSteps extends ScenarioSteps {
     }
 
     @Then("I should get a valid response")
-    public void see_valid_response() {
+    public void seeValidResponse() {
         HashMap<String,String> cityData= new HashMap<String,String>();
         Assert.assertTrue("The city name is not displayed in results table ", resultPage.resultCityExists(Serenity.sessionVariableCalled("city")));
         Assert.assertEquals("The city name is not present in the search box in results",Serenity.sessionVariableCalled("city"),  resultPage.getSearchedStringText());
