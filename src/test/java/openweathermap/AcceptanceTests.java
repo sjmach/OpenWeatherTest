@@ -21,13 +21,13 @@ public class AcceptanceTests extends SerenityStories {
 		String storyProperty = System.getProperty("story");
 		List<String> stories = null;
 
-		if(storyProperty.equals("home"))
+		if(("home").equals("storyProperty"))
 		{
 			stories = new StoryFinder().findPaths(
 					codeLocationFromClass(this.getClass()), "**/homepage.story", "**/excluded*.story");
 		}
 		
-		if(storyProperty.equals("city"))
+		if(("city").equals("storyProperty"))
 		{
 	     stories = new StoryFinder().findPaths(
 	    		
@@ -35,7 +35,7 @@ public class AcceptanceTests extends SerenityStories {
 		}
 
 
-		if(storyProperty.equals("all"))
+		if(("all").equals("storyProperty"))
 		{
 	     stories = new StoryFinder().findPaths(codeLocationFromClass(this.getClass()), "**/*.story", "**/excluded*.story");
 
