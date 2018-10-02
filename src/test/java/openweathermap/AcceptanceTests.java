@@ -10,6 +10,7 @@ import static net.thucydides.core.webdriver.ThucydidesWebDriverSupport.getDriver
 import static org.jbehave.core.io.CodeLocations.codeLocationFromClass;
 
 public class AcceptanceTests extends SerenityStories {
+	private String storyProperty = System.getProperty("story");
 
     @WhenPageOpens
     public void maximiseScreen() {
@@ -18,16 +19,16 @@ public class AcceptanceTests extends SerenityStories {
 
 	@Override
 	public List<String> storyPaths() {
-		String storyProperty = System.getProperty("story");
+
 		List<String> stories = null;
 
-		if(("home").equals("storyProperty"))
+		if(("home").equals(storyProperty))
 		{
 			stories = new StoryFinder().findPaths(
 					codeLocationFromClass(this.getClass()), "**/homepage.story", "**/excluded*.story");
 		}
 		
-		if(("city").equals("storyProperty"))
+		if(("city").equals(storyProperty))
 		{
 	     stories = new StoryFinder().findPaths(
 	    		
@@ -35,7 +36,7 @@ public class AcceptanceTests extends SerenityStories {
 		}
 
 
-		if(("all").equals("storyProperty"))
+		if(("all").equals(storyProperty))
 		{
 	     stories = new StoryFinder().findPaths(codeLocationFromClass(this.getClass()), "**/*.story", "**/excluded*.story");
 
