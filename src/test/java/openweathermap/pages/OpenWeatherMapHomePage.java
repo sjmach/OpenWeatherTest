@@ -15,31 +15,31 @@ public class OpenWeatherMapHomePage extends PageObject {
     final static Logger logger = Logger.getLogger(OpenWeatherMapHomePage.class);
 
     @FindBy(xpath="//button[contains(@class, 'btn btn-orange')]")
-    WebElementFacade searchButton;
+    private WebElementFacade searchButton;
 
     @FindBy(id="nav-search")
-    WebElementFacade navSearchText;
+    private WebElementFacade navSearchText;
 
     @FindBy(id="searchform")
-    WebElementFacade searchForm;
+    private WebElementFacade searchForm;
 
     @FindBy(xpath="//h2[contains(@class, 'widget__title')]")
-    WebElementFacade widgetTitle;
+    private WebElementFacade widgetTitle;
 
     @FindBy(id="tab-main")
-    WebElementFacade tabMain;
+    private WebElementFacade tabMain;
 
     @FindBy(id="tab-daily")
-    WebElementFacade tabDaily;
+    private WebElementFacade tabDaily;
 
     @FindBy(id="tab-hourly")
-    WebElementFacade tabHourly;
+    private WebElementFacade tabHourly;
 
     @FindBy(id="tab-chart")
-    WebElementFacade tabChart;
+    private WebElementFacade tabChart;
 
     @FindBy(id="tab-map")
-    WebElementFacade tabMap;
+    private WebElementFacade tabMap;
 
 
     public OpenWeatherMapHomePage(WebDriver driver) {

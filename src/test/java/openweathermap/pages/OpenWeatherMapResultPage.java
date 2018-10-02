@@ -20,19 +20,19 @@ public class OpenWeatherMapResultPage extends PageObject {
 
 
     @FindBy(name="q")
-    WebElementFacade resultquery;
+    private WebElementFacade resultquery;
 
     @FindBy(xpath="//div[contains(@class, 'alert alert-warning')]")
-    WebElementFacade errorBox;
+    private WebElementFacade errorBox;
 
     @FindBy(xpath="//button[contains(@class, 'btn btn-color')]")
-    WebElementFacade searchButton;
+    private WebElementFacade searchButton;
 
     @FindBy(id="forecast_list_ul")
-    WebElementFacade tableList;
+    private WebElementFacade tableList;
 
     @FindBy(id="searchform")
-    WebElementFacade searchForm;
+    private WebElementFacade searchForm;
 
 
     public OpenWeatherMapResultPage(WebDriver driver) {
