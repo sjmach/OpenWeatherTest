@@ -12,8 +12,6 @@ import org.apache.log4j.Logger;
 @DefaultUrl("https://openweathermap.org")
 public class OpenWeatherMapHomePage extends PageObject {
 
-    final static Logger logger = Logger.getLogger(OpenWeatherMapHomePage.class);
-
     @FindBy(xpath="//button[contains(@class, 'btn btn-orange')]")
     private WebElementFacade searchButton;
 
