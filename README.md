@@ -1,0 +1,2 @@
+# OpenWeatherTest
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/b439aa465e1e4336bf9015f0d27c6a87)](https://app.codacy.com/app/sjmach/OpenWeatherTest?utm_source=github.com&utm_medium=referral&utm_content=sjmach/OpenWeatherTest&utm_campaign=Badge_Grade_Dashboard)
