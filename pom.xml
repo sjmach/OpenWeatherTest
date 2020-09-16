@@ -10,7 +10,7 @@
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <serenity.version>2.0.82</serenity.version>
-        <serenity.jbehave.version>1.42.0</serenity.jbehave.version>
+        <serenity.jbehave.version>1.46.0</serenity.jbehave.version>
         <webdriver.driver>chrome</webdriver.driver>
     </properties>
 
