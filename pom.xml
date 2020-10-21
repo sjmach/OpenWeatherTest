@@ -17,11 +17,19 @@
     <repositories>
         <repository>
             <snapshots>
-                <enabled>false</enabled>
+                <enabled>true</enabled>
             </snapshots>
             <id>central</id>
             <name>bintray</name>
-            <url>http://jcenter.bintray.com</url>
+            <url>https://jcenter.bintray.com</url>
+        </repository>
+        <repository>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+            <id>central2</id>
+            <name>bintray</name>
+            <url>https://repo1.maven.org/maven2</url>
         </repository>
     </repositories>
     <pluginRepositories>
@@ -31,7 +39,7 @@
             </snapshots>
             <id>central</id>
             <name>bintray-plugins</name>
-            <url>http://jcenter.bintray.com</url>
+            <url>https://jcenter.bintray.com</url>
         </pluginRepository>
     </pluginRepositories>
 
@@ -93,8 +101,7 @@
             </plugin>
             <plugin>
                 <artifactId>maven-failsafe-plugin</artifactId>
-                   <version>2.22.2</version>
-                 <scope>test</scope>
+                   <version>2.22.0</version>
                 <configuration>
                     <includes>
                         <include>**/*Tests.java</include>
